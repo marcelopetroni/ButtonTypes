@@ -29,7 +29,7 @@ function App() {
         </div>
       </main>
       <footer>
-
+        <h4>Created by marcelopetroni - devChallenges.io</h4>
       </footer>
     </>
   )
