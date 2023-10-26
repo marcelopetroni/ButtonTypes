@@ -16,7 +16,6 @@ function App() {
             <h2 className='undone'>Undone</h2>
             <h2 className='completed'>Completed</h2>
           </div>
-        <div>
         <div class="minus icon"></div>
         <div class="group">
             <input placeholder="Add details" type="text" class="input"/>
@@ -25,6 +24,11 @@ function App() {
               <span class="lable">Add</span>
             </button>
         </div>
+          <div class="card">
+            <label class="container">
+              <input type="checkbox"/>
+              <span className='checkmark'></span>
+            </label>
           </div>
         </div>
       </main>
