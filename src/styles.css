@@ -121,14 +121,15 @@ footer {
 }
   
 .card {
-    margin-top: 10px;
-    width: auto;
+    margin-top: 12px;
+    width:auto;
     height: 50px;
     border-radius: 20px;
     background: #e0e0e0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 /* the checkbox inside the card */
@@ -143,21 +144,21 @@ footer {
 .container input {
     opacity: 0;
     position: absolute;
+    cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
 /* tamanho definido para o checkbox */
 label {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 /* design do novo checkbox */
 label span {
-    cursor: pointer;
-    position: absolute;
     width: 100%;
     height: 100%;
     border: 1px;
