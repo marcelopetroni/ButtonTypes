@@ -122,7 +122,7 @@ footer {
   
 .card {
     margin-top: 12px;
-    width:auto;
+    width: auto;
     height: 50px;
     border-radius: 20px;
     background: #e0e0e0;
@@ -149,6 +149,11 @@ footer {
     height: 100%;
 }
 
+.task {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+}
+
 /* tamanho definido para o checkbox */
 label {
     position: relative;
@@ -169,7 +174,7 @@ label span {
 
 /* ao mudar o estado para checked, ele muda a cor do novo checkbox */
 .container input:checked ~ .checkmark {
-    background-image: linear-gradient(rgb(146, 56, 56),rgb(174, 75, 75))
+    background-image: linear-gradient(rgb(146, 56, 56),rgb(174, 75, 75));
 }
 
 /* cria o checkmark */
