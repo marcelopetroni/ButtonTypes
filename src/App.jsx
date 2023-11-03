@@ -53,7 +53,7 @@ function App() {
             </div>
           </form>
           {tasks.map((item, index) => (
-            <Card key={index} task={item} />
+            <Card key={index} task={item}/>
           ))}
         </div>
       </main>

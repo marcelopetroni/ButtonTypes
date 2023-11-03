@@ -185,10 +185,10 @@ label span {
 }
    
 /* mostra o checkmark quando checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
+.container input:checked ~ .checkmark:after { /* classe funcao:condicao ~ outra classe(abaixo instruções p/ ele) */
+    display: block
 }
-   
+
 /* estilizar checkmark */
 .container .checkmark:after {
     left: 0.45em;
