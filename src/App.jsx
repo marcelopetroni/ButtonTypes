@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './styles.css'
-import Card from './components/Card'; /* precisa ser em upperCase a primeira letra */
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Card from './components/card';
 
 function App() {
   const [task, setTask] = useState('');
@@ -27,12 +29,23 @@ function App() {
       <header>
         <h1>To do List</h1>
       </header>
+      <Router>
       <main>
         <div className='conteudo'>
           <div className='tipos'>
-            <h2 className='all'>All</h2>
-            <h2 className='undone'>Undone</h2>
-            <h2 className='completed'>Completed</h2>
+
+            <Link to = "/" style={{textDecoration: "none", color: "#000"}}>
+              <h2 className='all'>All</h2>
+            </Link>
+
+            <Link to = "/Undone" style={{textDecoration: "none", color: "#000"}}>
+              <h2 className='undone'>Undone</h2>
+            </Link>
+
+            <Link to = "Completed" style={{textDecoration: "none", color: "#000"}}>
+              <h2 className='completed'>Completed</h2>
+            </Link>
+
           </div>
         <div class="minus icon"></div>
           <form onSubmit={handleTask}>
@@ -52,11 +65,32 @@ function App() {
               </button>
             </div>
           </form>
-          {tasks.map((item, index) => (
-            <Card key={index} task={item}/>
-          ))}
+          <Routes>
+          
+          {/* Todas as tasks */}
+            <Route 
+            path = "/" 
+            element = {tasks.map((item, index) => (
+                      <Card key={index} task={item}/>))}
+            />
+      
+          {/* Tasks concluídas */}
+            <Route 
+              path = "/Completed" 
+              element = {task}
+            />
+
+          {/* Tasks concluídas */}
+            <Route 
+              path = "/Undone" 
+              element = {tasks.map((item, index) => (
+                      <Card key={index} task={item}/>))}
+            />
+
+          </Routes>
         </div>
       </main>
+      </Router>
       <footer>
         <h4>Created by marcelopetroni - devChallenges.io</h4>
       </footer>
