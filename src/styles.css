@@ -37,6 +37,7 @@ footer {
 .tipos {
     font-family: 'Playpen Sans', cursive;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     gap: 50px;
 }
@@ -46,12 +47,6 @@ footer {
 }
 .all:hover {
     color:#b0544e;
-}
-.undone:hover {
-    color: #b0544e;
-}
-.completed:hover {
-    color: #b0544e;
 }
 .minus.icon {
     color: #000;
@@ -130,6 +125,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative; /* foi posto para posicionar o lixo no final da div e position: absolute na classe dele*/
 }
 
 /* the checkbox inside the card */
@@ -154,6 +150,14 @@ footer {
     font-size: 14px;
 }
 
+.trash {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+}
 /* tamanho definido para o checkbox */
 label {
     position: relative;

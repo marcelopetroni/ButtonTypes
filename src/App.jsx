@@ -9,12 +9,12 @@ function App() {
   const[tasks, setTasks] = useState([]); /* note que para listas utiliza [] dentro do useState */
 
   const handleTask = (e) => { /* usei const invés de function */
-    e.preventDefault(); /*  evita que a página seja recarregada quando o formulário é enviado.*/
-
+     /*  evita que a página seja recarregada quando o formulário é enviado.*/
+    e.preventDefault();
+    
     setTasks([...tasks, task]);
     /* Atualiza o estado tasks adicionando a nova tarefa (task) à lista existente (...tasks). 
     Isso preserva as tarefas antigas e adiciona a nova tarefa. */
-
     setTask('');
   }
 
@@ -35,15 +35,7 @@ function App() {
           <div className='tipos'>
 
             <Link to = "/" style={{textDecoration: "none", color: "#000"}}>
-              <h2 className='all'>All</h2>
-            </Link>
-
-            <Link to = "/Undone" style={{textDecoration: "none", color: "#000"}}>
-              <h2 className='undone'>Undone</h2>
-            </Link>
-
-            <Link to = "Completed" style={{textDecoration: "none", color: "#000"}}>
-              <h2 className='completed'>Completed</h2>
+              <h2 className='all'>Today's Tasks</h2>
             </Link>
 
           </div>
@@ -53,8 +45,11 @@ function App() {
             <input 
               placeholder="Add details" 
               type="text" 
-              class="input"
-              onChange={(e) => setTask(e.target.value)}
+              className="input"
+              value={task}
+              onChange={(e) => 
+                setTask(e.target.value)
+              }
               onKeyUp={handleKeyPress}
               /* notei que só aperece as funções e funciona se cada uma tiver em uma linha para cada */
               />
@@ -65,6 +60,7 @@ function App() {
               </button>
             </div>
           </form>
+          {console.log(tasks)}
           <Routes>
           
           {/* Todas as tasks */}
@@ -73,20 +69,6 @@ function App() {
             element = {tasks.map((item, index) => (
                       <Card key={index} task={item}/>))}
             />
-      
-          {/* Tasks concluídas */}
-            <Route 
-              path = "/Completed" 
-              element = {task}
-            />
-
-          {/* Tasks concluídas */}
-            <Route 
-              path = "/Undone" 
-              element = {tasks.map((item, index) => (
-                      <Card key={index} task={item}/>))}
-            />
-
           </Routes>
         </div>
       </main>
