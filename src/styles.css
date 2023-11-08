@@ -1,3 +1,8 @@
+body {
+    background-color: #ececec;
+    margin: 0;
+}
+
 header {
 	top: 0;
 	left: 0;
@@ -13,15 +18,18 @@ header {
 }
 
 main {
-    height: 80vh; /* para que separe o main do footer */
+    min-height: 500px; /* define altura mínima com possibilidade de aumentar à medida que é acrescentado cards */
+    margin-bottom: 50px;
     background-color: #ececec;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 footer {
+    position: static; /* mantém estático naquele lugar e não fico na tela */
+    bottom: 0;      /* fim da página */
+    width: 100%;
     background-color:#e3e3e3;
     font-family: 'Playpen Sans', cursive;
     color:rgb(120, 120, 120);

@@ -11,11 +11,18 @@ function App() {
   const handleTask = (e) => { /* usei const invés de function */
      /*  evita que a página seja recarregada quando o formulário é enviado.*/
     e.preventDefault();
+
+    if (tasks.length >= 50) {
+      alert("Você atingiu o limite tasks que podem ser adicionados."); /* limite de tasks na tela */
+      return;
+    }
     
     setTasks([...tasks, task]);
     /* Atualiza o estado tasks adicionando a nova tarefa (task) à lista existente (...tasks). 
     Isso preserva as tarefas antigas e adiciona a nova tarefa. */
+
     setTask('');
+    /* limpa o campo */
   }
 
   const handleKeyPress = (event) => { /* para utilizar o enter como submit */
@@ -46,7 +53,7 @@ function App() {
               placeholder="Add details" 
               type="text" 
               className="input"
-              value={task}
+              value={task} /* muito importante acrescentar para que o campo seja limpo após envio do formulário */
               onChange={(e) => 
                 setTask(e.target.value)
               }
