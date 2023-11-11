@@ -17,12 +17,30 @@ function App() {
       return;
     }
     
-    setTasks([...tasks, task]);
+    setTasks([...tasks,
+      {
+        description: task,
+        checked: false
+      }
+      ]);
+
     /* Atualiza o estado tasks adicionando a nova tarefa (task) à lista existente (...tasks). 
-    Isso preserva as tarefas antigas e adiciona a nova tarefa. */
+    Isso preserva as tarefas antigas e adiciona a nova tarefa, também há atributos para diferenciá-los */
 
     setTask('');
     /* limpa o campo */
+  }
+
+  const handleCheckbox = (task) => {
+    const newList = tasks.map(item => {
+
+      if (item.description === task) {
+        return { ...item, checked: !item.checked }; // Atualiza apenas o atributo 'checked'
+      }
+      return item; // Mantém os outros objetos inalterados
+    });
+
+    setTasks(newList);
   }
 
   const handleKeyPress = (event) => { /* para utilizar o enter como submit */
@@ -30,6 +48,14 @@ function App() {
       event.preventDefault(); 
     }
   };
+
+  const handleDelete = (taskToDelete) => {
+    const newList = tasks.filter(item => item.description !== taskToDelete);
+    // filter cria uma nova lista e sem seguida verifica quais items de taks são diferentes daquele que vai deletar
+    // se for diferente, entra na nova lista com todos menos ele.
+
+    setTasks(newList); // seta nova lista
+  }
 
   return (
     <>
@@ -42,7 +68,15 @@ function App() {
           <div className='tipos'>
 
             <Link to = "/" style={{textDecoration: "none", color: "#000"}}>
-              <h2 className='all'>Today's Tasks</h2>
+              <h2 className='all'>All</h2>
+            </Link>
+
+            <Link to = "/Undone" style={{textDecoration: "none", color: "#000"}}>
+              <h2 className='undone'>Undone</h2>
+            </Link>
+
+            <Link to = "/Done" style={{textDecoration: "none", color: "#000"}}>
+              <h2 className='done'>Done</h2>
             </Link>
 
           </div>
@@ -67,15 +101,33 @@ function App() {
               </button>
             </div>
           </form>
-          {console.log(tasks)}
           <Routes>
           
           {/* Todas as tasks */}
             <Route 
             path = "/" 
             element = {tasks.map((item, index) => (
-                      <Card key={index} task={item}/>))}
+                        <Card key={index} task={item.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {item.checked} />
+                      ))}
             />
+            <Route
+            path = "/Undone"
+            element = {tasks
+                .filter(objeto => objeto.checked === false)
+                .map((objeto, index) => (
+                  <Card key={index} task={objeto.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {objeto.checked} />
+                ))}
+            />
+
+            <Route
+            path = "/Done"
+            element = {tasks
+                .filter(objeto => objeto.checked === true)
+                .map((objeto, index) => (
+                  <Card key={index} task={objeto.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {objeto.checked} />
+                ))}
+            />
+
           </Routes>
         </div>
       </main>
