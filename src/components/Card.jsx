@@ -1,5 +1,4 @@
 import React from 'react';
-import {useState } from 'react';
 import { BiTrash } from 'react-icons/bi';
 
 function Card({task, onDelete, checkbox, checked}) { /* precisa por entre {} caso queria mudar o estado do outro arquivo */

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './styles.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Card from './components/card';
+import Card from './components/Card';
 
 function App() {
   const [task, setTask] = useState('');
