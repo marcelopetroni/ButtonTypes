@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3> 
-    <a href="https://{to-do-list-react-bb8y.vercel.app/}">
+    <a href="https://to-do-list-react-bb8y.vercel.app/">
       Acesse o site aqui
     </a>
     <span> | </span>
