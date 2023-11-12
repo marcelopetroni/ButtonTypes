@@ -21,12 +21,12 @@ function Card({task, onDelete, checkbox, checked}) { /* precisa por entre {} cas
                 sobre o texto, caso contrário, não faz nada*/}
               {task}
               {/* para ser identificado como uma variável de estado botar entre {}*/}
-              </span>
-              <button className = "trash "><BiTrash 
+            </span>
+            <button className = "trash "><BiTrash 
               size = {20}
               color = "#000"
               onClick={() => onDelete(task)}
-              /></button>
+            /></button>
           </div>
         </>
     )

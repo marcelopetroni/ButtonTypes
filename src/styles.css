@@ -165,6 +165,7 @@ footer {
 .task {
     font-family: 'Playpen Sans', cursive;
     font-size: 14px;
+    margin-right: 40px;
 }
 
 .trash {
