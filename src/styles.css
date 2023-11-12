@@ -56,6 +56,15 @@ footer {
 .all:hover {
     color:#b0544e;
 }
+
+.undone:hover {
+    color:#b0544e;
+}
+
+.done:hover {
+    color:#b0544e;
+}
+
 .minus.icon {
     color: #000;
     margin-left: 3px;

@@ -52,7 +52,7 @@ function App() {
   const handleDelete = (taskToDelete) => {
     const newList = tasks.filter(item => item.description !== taskToDelete);
     // filter cria uma nova lista e sem seguida verifica quais items de taks são diferentes daquele que vai deletar
-    // se for diferente, entra na nova lista com todos menos ele.
+    // se for diferente, entra na nova lista junto a todos menos o item a apagar.
 
     setTasks(newList); // seta nova lista
   }
@@ -84,6 +84,7 @@ function App() {
           <form onSubmit={handleTask}>
           <div class="group">
             <input 
+              autoFocus /* permite o campo de input está selecionado ao entrar na página */
               placeholder="Add details" 
               type="text" 
               className="input"
@@ -91,7 +92,7 @@ function App() {
               onChange={(e) => 
                 setTask(e.target.value)
               }
-              onKeyUp={handleKeyPress}
+              onKeyUp={handleKeyPress} /* para permitir submeter formulário pela tecla enter */
               /* notei que só aperece as funções e funciona se cada uma tiver em uma linha para cada */
               />
             
@@ -110,23 +111,35 @@ function App() {
                         <Card key={index} task={item.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {item.checked} />
                       ))}
             />
+
+          {/* Tasks incompletas */}
             <Route
             path = "/Undone"
             element = {tasks
-                .filter(objeto => objeto.checked === false)
+                .filter(objeto => objeto.checked === false) /* limita apenas àqueles items não marcados. */
                 .map((objeto, index) => (
                   <Card key={index} task={objeto.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {objeto.checked} />
                 ))}
             />
 
+          {/* Tasks completas */}
             <Route
             path = "/Done"
             element = {tasks
-                .filter(objeto => objeto.checked === true)
+                .filter(objeto => objeto.checked === true) /* limita apenas àqueles items marcados. */
                 .map((objeto, index) => (
                   <Card key={index} task={objeto.description} onDelete={handleDelete} checkbox = {handleCheckbox} checked = {objeto.checked} />
                 ))}
             />
+            {/* interliguei a função handleCheckbox para o componente cruzar uma linha no texto ao ser apertado 
+            o checkbox, além disso, informo o estado do checkbox (checked ou unchecked) para deixar os checkboxs do
+            do router done como marcados e os do router undone como não marcados, tudo isso a partir da verificação
+            da props do objeto em questão, cada objeto é um item da lista que foi definido no handleTask. */}
+
+            {/* "objeto.checked":
+                objeto = item da lista de estados de tasks
+              .checked = props que serve como "tag" para definir se está marcada ou não e usado para manipular
+              onde os dados serão usados, nesse exemplo utilizei a função .filter para separá-los.*/}
 
           </Routes>
         </div>
