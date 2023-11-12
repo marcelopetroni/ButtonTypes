@@ -5,8 +5,8 @@
 </div>
 
 <div align="center">
-  <h3>
-    <a href="https://{your-url-to-the-solution}">
+  <h3> 
+    <a href="https://{to-do-list-react-bb8y.vercel.app/}">
       Acesse o site aqui
     </a>
     <span> | </span>
@@ -76,5 +76,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@your-username](https://{github.com/marcelopetroni}) 
-- Linkedin [@your-twitter](https://{www.linkedin.com/in/marcelo-nunes-a8b7a223a/}) 
+- GitHub [@marcelopetroni](https://github.com/marcelopetroni) 
+- Linkedin [Marcelo Nunes](https://www.linkedin.com/in/marcelo-nunes-a8b7a223a/) 
