@@ -30,8 +30,7 @@
 <!-- OVERVIEW -->
 
 ## Overview
-
-[Captura de tela 2023-11-12 165008](https://github.com/marcelopetroni/ToDoListReact/assets/105806830/a37464a7-da79-4964-a81d-8e30607c9045)
+![screenshot](![Captura de tela 2023-11-12 165008](https://github.com/marcelopetroni/ToDoListReact/assets/105806830/bc0445fe-8156-451c-b531-139f503c53dc)
 
 - Acesse meu projeto pelo link: https://to-do-list-react-bb8y.vercel.app/
 - O projeto foi feito utilizando React - Vite, é um site com propósito de organizar afazeres por um To Do List.
