@@ -31,10 +31,9 @@
 
 ## Overview
 
-![screenshot](![Captura de tela 2023-11-12 165008](https://github.com/marcelopetroni/ToDoListReact/assets/105806830/a37464a7-da79-4964-a81d-8e30607c9045)
-)
+[Captura de tela 2023-11-12 165008](https://github.com/marcelopetroni/ToDoListReact/assets/105806830/a37464a7-da79-4964-a81d-8e30607c9045)
 
-- Acesse meu projeto pelo link: 
+- Acesse meu projeto pelo link: https://to-do-list-react-bb8y.vercel.app/
 - O projeto foi feito utilizando React - Vite, é um site com propósito de organizar afazeres por um To Do List.
 - Foi muito agregador para conhecer ferramentas como o React Routes, entre outros.
 
@@ -78,6 +77,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@your-username](https://{github.com/marcelopetroni}) 
+- Linkedin [@your-twitter](https://{www.linkedin.com/in/marcelo-nunes-a8b7a223a/}) 
