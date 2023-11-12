@@ -7,7 +7,7 @@
 <div align="center">
   <h3>
     <a href="https://{your-url-to-the-solution}">
-      Solution
+      Acesse o site aqui
     </a>
     <span> | </span>
     <a href="https://legacy.devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
@@ -31,14 +31,12 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](![Captura de tela 2023-11-12 165008](https://github.com/marcelopetroni/ToDoListReact/assets/105806830/a37464a7-da79-4964-a81d-8e30607c9045)
+)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- Acesse meu projeto pelo link: 
+- O projeto foi feito utilizando React - Vite, é um site com propósito de organizar afazeres por um To Do List.
+- Foi muito agregador para conhecer ferramentas como o React Routes, entre outros.
 
 ### Built With
 
