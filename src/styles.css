@@ -9,7 +9,7 @@ header {
     width: 100%;
     height: 90px;
     background-color: rgb(167, 64, 64);
-    font-family: 'Jost', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 25px;
     color: white;
     display: flex;
@@ -43,7 +43,7 @@ footer {
     margin-top: 30px;
 }
 .tipos {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Manrope', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -82,7 +82,7 @@ footer {
 }
 
 .input {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Manrope', sans-serif;
     height: 40px;
     line-height: 28px;
     padding: 0 1rem;
@@ -163,7 +163,7 @@ footer {
 }
 
 .task {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 14px;
     margin-right: 40px;
 }

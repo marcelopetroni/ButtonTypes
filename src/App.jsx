@@ -59,6 +59,7 @@ function App() {
 
   return (
     <>
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet"></link>
       <header>
         <h1>To do List</h1>
       </header>
